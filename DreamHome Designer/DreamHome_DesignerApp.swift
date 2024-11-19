@@ -11,7 +11,7 @@ import SwiftUI
 struct DreamHome_DesignerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadingView()
         }
     }
 }
