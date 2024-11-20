@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var vm: HomeViewModel
+    @StateObject var vmProject: ProjectViewModel
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -30,26 +32,38 @@ struct HomeView: View {
                     
                     //MARK: - Project buttoms
                     HStack{
+                        Button {
+                            vm.selectedVew = 2
+                        } label: {
+                            VStack {
+                                Image(.myProfectIcon)
+                                    .resizable()
+                                    .frame(width: 171, height: 180)
+                                Text("My project")
+                                    .foregroundStyle(.white)
+                                    .offset(y: -10)
+                                    .shadow(radius: 20)
+                            }
+                        }
+
                         
-                        VStack {
-                            Image(.myProfectIcon)
-                                .resizable()
-                                .frame(width: 171, height: 180)
-                            Text("My project")
-                                .foregroundStyle(.white)
-                                .offset(y: -10)
-                                .shadow(radius: 20)
-                        }
                         Spacer()
-                        VStack {
-                            Image(.addNewProjectIcon)
-                                .resizable()
-                                .frame(width: 171, height: 180)
-                            Text("Add new project")
-                                .foregroundStyle(.white)
-                                .offset(y: -10)
-                                .shadow(radius: 20)
+                        
+                        NavigationLink {
+                            ProjectCreateView(vm: vmProject)
+                        } label: {
+                            VStack {
+                                Image(.addNewProjectIcon)
+                                    .resizable()
+                                    .frame(width: 171, height: 180)
+                                Text("Add new project")
+                                    .foregroundStyle(.white)
+                                    .offset(y: -10)
+                                    .shadow(radius: 20)
+                            }
                         }
+
+                        
                     }
                     
                     //MARK: - Last progect
@@ -73,11 +87,10 @@ struct HomeView: View {
                     }
                 }
             }
-            
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(vm: HomeViewModel(), vmProject: ProjectViewModel())
 }
