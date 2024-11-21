@@ -18,7 +18,7 @@ struct MainView: View {
                     switch vmHome.selectedVew {
                     case 1: HomeView(vm: vmHome, vmProject: vmProject)
                     case 2: ProjectsView(vm: vmProject)
-//                    case 3: NewsView(vm: vmNews)
+                    case 3: SettingsView()
                     default:
                         SettingsView()
                     }

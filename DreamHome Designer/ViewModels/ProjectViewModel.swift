@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 import Combine
 import UIKit
+import PhotosUI
 
 
 final class ProjectViewModel: ObservableObject {
@@ -19,13 +20,34 @@ final class ProjectViewModel: ObservableObject {
     private var photosProject: [PhotoProject] = []
     
     @Published var simpleNoteText: String = ""
-    @Published var simplePhoto: UIImage? = nil
+    @Published var simpleNoteTitle: String = ""
+    @Published var simpleNote: NoteProject?
+    @Published var isEditeNoteMode = false
+    
+    @Published var simplePhoto: UIImage = .logo
+    
     @Published var searchText: String = ""
     @Published var simpleNameProject = ""
     @Published var simpleStyle = Style.Other
     @Published var simpleType = TypeProject.Exterior
     
+    @Published var isPresentAddNote: Bool = false
+    @Published var isPresentImage: Bool = false
+    @Published var isPresentAddImage = false
+    @Published var isPresentPhotoPicer = false
+    
+    
+    @Published var simpleImage: PhotoProject?
+    
     @Published private(set) var filteredProjects: [Project] = []
+    
+    var config: PHPickerConfiguration {
+        var config = PHPickerConfiguration(photoLibrary: .shared())
+        config.filter = .images
+        config.selectionLimit = 1
+        
+        return config
+    }
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -33,6 +55,57 @@ final class ProjectViewModel: ObservableObject {
         fetchProjects()
         fetchNotesProject()
         fetchPhotoProject()
+    }
+    
+    //MARK: - Edit data
+    func editNoteData(){
+        simpleNote?.title = simpleNoteTitle
+        simpleNote?.text = simpleNoteText
+        saveNoteProject()
+        isEditeNoteMode = false
+        isPresentAddNote = false
+        clearNoteData()
+    }
+    
+    //MARK: - Felldata
+    func feelNoteData(note: NoteProject){
+        simpleNoteText = note.text ?? ""
+        simpleNoteTitle = note.title ?? ""
+        simpleNote = note
+        isEditeNoteMode = true
+    }
+    
+    //MARK: - Delete data
+    func deleteNote(){
+        if simpleNote != nil {
+            manager.context.delete(simpleNote!)
+            saveNoteProject()
+            isPresentAddNote = false
+        }
+        
+    }
+    
+    func deleteImage() {
+        manager.context.delete(simpleImage!)
+        savePhotoProject()
+        isPresentImage = false
+    }
+    
+    func deleteProject(project: Project) {
+        if let imges = project.photo?.allObjects as? [PhotoProject] {
+            for image in imges {
+                manager.context.delete(image)
+            }
+            savePhotoProject()
+        }
+        if let notes = project.note?.allObjects as? [NoteProject] {
+            for note in notes {
+                manager.context.delete(note)
+            }
+            saveNoteProject()
+        }
+        manager.context.delete(project)
+        saveProject()
     }
     
     //MARK: - Add Data
@@ -47,16 +120,19 @@ final class ProjectViewModel: ObservableObject {
     func addNote(project: Project) {
         let newNote = NoteProject(context: manager.context)
         newNote.text = simpleNoteText
+        newNote.title = simpleNoteTitle
         newNote.project = project
         saveNoteProject()
-        simpleNoteText = ""
+        clearNoteData()
+        isPresentAddNote = false
+        
     }
     func addPhoto(project: Project) {
         let newPhoto = PhotoProject(context: manager.context)
         newPhoto.photo = simplePhoto
         newPhoto.project = project
         savePhotoProject()
-        simplePhoto = nil
+        simplePhoto = .logo
     }
     
     
@@ -126,5 +202,10 @@ final class ProjectViewModel: ObservableObject {
         simpleNameProject = ""
         simpleType = .Exterior
         simpleStyle = .Other
+    }
+    func clearNoteData() {
+        simpleNote = nil
+        simpleNoteText = ""
+        simpleNoteTitle = ""
     }
 }

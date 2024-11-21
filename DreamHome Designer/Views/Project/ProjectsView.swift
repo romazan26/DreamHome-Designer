@@ -29,7 +29,7 @@ struct ProjectsView: View {
                             .multilineTextAlignment(.center)
                             .padding(50)
                     }else{
-                        LazyVGrid(columns: [GridItem(), GridItem()]) {
+                        LazyVGrid(columns: [GridItem(), GridItem()], spacing: 10) {
                             ForEach(vm.filteredProjects) { project in
                                 NavigationLink {
                                     ProjectView(project: project, vm: vm)

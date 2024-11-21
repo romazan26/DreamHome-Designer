@@ -11,9 +11,18 @@ struct ProjectCellView: View {
     @ObservedObject var project: Project
     var body: some View {
         ZStack {
-            Image(systemName: "photo.artframe")
-                .resizable()
-                .foregroundStyle(.gray)
+            if let photos = project.photo?.allObjects as? [PhotoProject]{
+                if let photo = photos.first?.photo{
+                    Image(uiImage: photo)
+                        .resizable()
+                        .cornerRadius(20)
+                }else{
+                    Image(systemName: "photo.artframe")
+                        .resizable()
+                        .foregroundStyle(.gray)
+                }
+            }
+            
             VStack {
                 //MARK: Style
                 HStack {
@@ -46,7 +55,7 @@ struct ProjectCellView: View {
             }.padding(5)
         }
         .clipShape(RoundedRectangle(cornerRadius: 12))
-        .frame(width: 171, height: 96)
+        .frame(width: 160, height: 96)
     }
 }
 

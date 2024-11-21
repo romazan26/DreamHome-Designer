@@ -48,18 +48,20 @@ struct ProjectView: View {
                 
                 //MARK: - Photo project
                 HStack{
-                    Button {
-                        
+                    NavigationLink {
+                        AllImageView(project: project, vm: vm)
                     } label: {
                         PlusButtomView()
                     }
                     if let photos = project.photo?.allObjects as? [PhotoProject]{
                         ScrollView(.horizontal) {
-                            ForEach(photos.prefix(3)) { project in
-                                Image(uiImage: project.photo ?? .logo)
-                                    .resizable()
-                                    .frame(width: 200, height: 150)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                            HStack {
+                                ForEach(photos.prefix(3)) { project in
+                                    Image(uiImage: project.photo ?? .logo)
+                                        .resizable()
+                                        .frame(width: 200, height: 150)
+                                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                                }
                             }
                         }
                     }
@@ -77,16 +79,22 @@ struct ProjectView: View {
                 
                 //MARK: - Notes project
                 HStack{
-                    PlusButtomView()
-                    
+                    Button {
+                        vm.isPresentAddNote = true
+                    } label: {
+                        PlusButtomView()
+                    }
                     if let notes = project.note?.allObjects as? [NoteProject]{
                         ScrollView(.horizontal) {
-                            ForEach(notes) { note in
-                                VStack{
-                                    Text(note.title ?? "")
-                                        .font(.title3)
-                                    Text(note.text ?? "")
-                                }.foregroundStyle(.white)
+                            HStack {
+                                ForEach(notes) { note in
+                                    Button {
+                                        vm.isPresentAddNote = true
+                                        vm.feelNoteData(note: note)
+                                    } label: {
+                                        NoteCellView(note: note)
+                                    }
+                                }
                             }
                         }
                     }
@@ -99,7 +107,7 @@ struct ProjectView: View {
                 HStack{
                     //MARK: - Delete buttom
                     Button(action: {
-                       /// delete
+                        vm.deleteProject(project: project)
                     }) {
                         Image(systemName: "trash.square.fill")
                             .resizable()
@@ -117,9 +125,15 @@ struct ProjectView: View {
                             .foregroundStyle(.yellowApp)
                     }
                 }
-            }.padding()
+            }
+            .padding()
             .navigationTitle("Project")
             .navigationBarTitleDisplayMode(.inline)
+            
+            //MARK: - Add note view
+            if vm.isPresentAddNote {
+                AddNoteView(vm: vm, project: project)
+            }
         }
     }
 }

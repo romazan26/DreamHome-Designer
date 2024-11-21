@@ -10,6 +10,7 @@ import SwiftUI
 struct ProjectCreateView: View {
     @StateObject var vm: ProjectViewModel
     @Environment(\.dismiss) var dismiss
+    @FocusState var isFocused: Bool
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -20,6 +21,7 @@ struct ProjectCreateView: View {
                         .foregroundStyle(.white)
                     TextField("Your project name", text: $vm.simpleNameProject)
                         .colorScheme(.dark)
+                        .focused($isFocused)
                     }
                 
                 //MARK: - Project style
@@ -78,6 +80,9 @@ struct ProjectCreateView: View {
             .padding()
             .navigationTitle("Create Project")
             
+        }
+        .onTapGesture {
+            isFocused = false
         }
     }
 }
