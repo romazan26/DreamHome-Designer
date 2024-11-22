@@ -19,7 +19,7 @@ struct ProjectsView: View {
                     .focused($isFocusedKeyboard)
                 
                 //MARK: - Switch type
-                SwitchTypeprojectView()
+                SwitchTypeprojectView(vm: vm)
                 
                 //MARK: - List Projects
                 ScrollView {

@@ -28,7 +28,7 @@ struct HomeView: View {
                         }
                     
                     //MARK: - Info of progect
-                    InfoTableView()
+                    InfoTableView(vm: vmProject)
                     
                     //MARK: - Project buttoms
                     HStack{
@@ -78,12 +78,16 @@ struct HomeView: View {
                                 .frame(width: 25, height: 22)
                                 .foregroundStyle(.white)
                         }
+                        if vmProject.projects.isEmpty{
+                            Text("You don't have any projects yet")
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                                .frame(maxWidth: 170)
+                                .padding()
+                        }else{
+                            ProjectCellView(project: vmProject.projects.last!)
+                        }
                         
-                        Text("You don't have any projects yet")
-                            .foregroundStyle(.white)
-                            .multilineTextAlignment(.center)
-                            .frame(maxWidth: 170)
-                            .padding()
                     }
                 }
             }

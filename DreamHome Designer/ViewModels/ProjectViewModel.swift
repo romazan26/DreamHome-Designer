@@ -15,8 +15,13 @@ import PhotosUI
 final class ProjectViewModel: ObservableObject {
     let manager = CoreDataManager.instance
     
+    @Published var sortProjecttype = 0
+    
     @Published var projects: [Project] = []
-    private var notesProject: [NoteProject] = []
+    @Published var interiorProject: [Project] = []
+    @Published var exteriorProject: [Project] = []
+    
+    @Published var notesProject: [NoteProject] = []
     private var photosProject: [PhotoProject] = []
     
     @Published var simpleNoteText: String = ""
@@ -55,6 +60,31 @@ final class ProjectViewModel: ObservableObject {
         fetchProjects()
         fetchNotesProject()
         fetchPhotoProject()
+        sortedProjects()
+    }
+    
+    
+    //MARK: - Sotred function
+    func getProjects() -> [Project] {
+        sortedProjects()
+        switch sortProjecttype {
+            case 1: return exteriorProject
+            case 2: return interiorProject
+        default:
+            return projects
+        }
+    }
+    
+    func sortedProjects(){
+        interiorProject.removeAll()
+        exteriorProject.removeAll()
+        for project in projects {
+            if project.type == TypeProject.Exterior.rawValue {
+                exteriorProject.append(project)
+            }else{
+                interiorProject.append(project)
+            }
+        }
     }
     
     //MARK: - Edit data
@@ -190,10 +220,11 @@ final class ProjectViewModel: ObservableObject {
     }
     
     private func filterProjects() {
+         var simpleSortProject = getProjects()
         if searchText.isEmpty {
-            filteredProjects = projects
+            filteredProjects = simpleSortProject
         }else {
-            filteredProjects = projects.filter {$0.name?.lowercased().hasPrefix(searchText.lowercased()) ?? false}
+            filteredProjects = simpleSortProject.filter {$0.name?.lowercased().hasPrefix(searchText.lowercased()) ?? false}
         }
     }
      

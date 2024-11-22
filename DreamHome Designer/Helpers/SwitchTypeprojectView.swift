@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct SwitchTypeprojectView: View {
-    @State private var type = 0
+    @StateObject var vm: ProjectViewModel
+
     var body: some View {
         HStack {
             Button {
-                type = 0
+                vm.sortProjecttype = 0
             } label: {
                 Text("All")
                     .foregroundStyle(.white)
@@ -20,12 +21,12 @@ struct SwitchTypeprojectView: View {
                     .frame(maxWidth: .infinity)
                     .background {
                         Color.white
-                            .opacity(type == 0 ? 0.2 : 0)
+                            .opacity(vm.sortProjecttype == 0 ? 0.2 : 0)
                             .cornerRadius(12)
                     }
             }
             Button {
-                type = 1
+                vm.sortProjecttype = 2
             } label: {
                 Text("Interier")
                     .foregroundStyle(.white)
@@ -33,12 +34,12 @@ struct SwitchTypeprojectView: View {
                     .frame(maxWidth: .infinity)
                     .background {
                         Color.white
-                            .opacity(type == 1 ? 0.2 : 0)
+                            .opacity(vm.sortProjecttype == 2 ? 0.2 : 0)
                             .cornerRadius(12)
                     }
             }
             Button {
-                type = 2
+                vm.sortProjecttype = 1
             } label: {
                 Text("Exterier")
                     .foregroundStyle(.white)
@@ -46,7 +47,7 @@ struct SwitchTypeprojectView: View {
                     .frame(maxWidth: .infinity)
                     .background {
                         Color.white
-                            .opacity(type == 2 ? 0.2 : 0)
+                            .opacity(vm.sortProjecttype == 1 ? 0.2 : 0)
                             .cornerRadius(12)
                     }
             }
@@ -60,9 +61,9 @@ struct SwitchTypeprojectView: View {
     }
 }
 
-#Preview {
-    ZStack {
-        Color.black
-        SwitchTypeprojectView()
-    }
-}
+//#Preview {
+//    ZStack {
+//        Color.black
+//        SwitchTypeprojectView()
+//    }
+//}
