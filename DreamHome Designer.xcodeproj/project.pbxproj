@@ -3,20 +3,98 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		30EC1ABA2CF0BC23009ED94E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EC1A972CF0BC23009ED94E /* Preview Assets.xcassets */; };
+		30EC1ABB2CF0BC23009ED94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EC1AB62CF0BC23009ED94E /* Assets.xcassets */; };
+		30EC1ABC2CF0BC23009ED94E /* NoteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A812CF0BC23009ED94E /* NoteCellView.swift */; };
+		30EC1ABD2CF0BC23009ED94E /* ProjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A822CF0BC23009ED94E /* ProjectCellView.swift */; };
+		30EC1ABE2CF0BC23009ED94E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A842CF0BC23009ED94E /* CoreDataManager.swift */; };
+		30EC1ABF2CF0BC23009ED94E /* DreamHome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A852CF0BC23009ED94E /* DreamHome.xcdatamodeld */; };
+		30EC1AC02CF0BC23009ED94E /* PhotoProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A862CF0BC23009ED94E /* PhotoProject.swift */; };
+		30EC1AC12CF0BC23009ED94E /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A872CF0BC23009ED94E /* UIImageTransformer.swift */; };
+		30EC1AC22CF0BC23009ED94E /* EnumStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A892CF0BC23009ED94E /* EnumStyle.swift */; };
+		30EC1AC32CF0BC23009ED94E /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A8A2CF0BC23009ED94E /* EnumType.swift */; };
+		30EC1AC42CF0BC23009ED94E /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A8C2CF0BC23009ED94E /* CustomButtonView.swift */; };
+		30EC1AC52CF0BC23009ED94E /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A8D2CF0BC23009ED94E /* CustomTabBarView.swift */; };
+		30EC1AC62CF0BC23009ED94E /* infoTableButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A8E2CF0BC23009ED94E /* infoTableButtonView.swift */; };
+		30EC1AC72CF0BC23009ED94E /* InfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A8F2CF0BC23009ED94E /* InfoTableView.swift */; };
+		30EC1AC82CF0BC23009ED94E /* MultiLineTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A902CF0BC23009ED94E /* MultiLineTF.swift */; };
+		30EC1AC92CF0BC23009ED94E /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A912CF0BC23009ED94E /* PhotoPicker.swift */; };
+		30EC1ACA2CF0BC23009ED94E /* PlusButtomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A922CF0BC23009ED94E /* PlusButtomView.swift */; };
+		30EC1ACB2CF0BC23009ED94E /* SearchTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A932CF0BC23009ED94E /* SearchTextFieldView.swift */; };
+		30EC1ACC2CF0BC23009ED94E /* SettingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A942CF0BC23009ED94E /* SettingButtonView.swift */; };
+		30EC1ACD2CF0BC23009ED94E /* SwitchTypeprojectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A952CF0BC23009ED94E /* SwitchTypeprojectView.swift */; };
+		30EC1ACE2CF0BC23009ED94E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A992CF0BC23009ED94E /* HomeViewModel.swift */; };
+		30EC1ACF2CF0BC23009ED94E /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A9A2CF0BC23009ED94E /* LoadingViewModel.swift */; };
+		30EC1AD02CF0BC23009ED94E /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A9B2CF0BC23009ED94E /* ProjectViewModel.swift */; };
+		30EC1AD12CF0BC23009ED94E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A9C2CF0BC23009ED94E /* SettingsViewModel.swift */; };
+		30EC1AD22CF0BC23009ED94E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1A9E2CF0BC23009ED94E /* HomeView.swift */; };
+		30EC1AD32CF0BC23009ED94E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA02CF0BC23009ED94E /* LoadingView.swift */; };
+		30EC1AD42CF0BC23009ED94E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA22CF0BC23009ED94E /* MainView.swift */; };
+		30EC1AD52CF0BC23009ED94E /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA42CF0BC23009ED94E /* AddNoteView.swift */; };
+		30EC1AD62CF0BC23009ED94E /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA62CF0BC23009ED94E /* IntroView.swift */; };
+		30EC1AD72CF0BC23009ED94E /* PageIntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA72CF0BC23009ED94E /* PageIntroModel.swift */; };
+		30EC1AD82CF0BC23009ED94E /* PageIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AA82CF0BC23009ED94E /* PageIntroView.swift */; };
+		30EC1AD92CF0BC23009ED94E /* AddImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAA2CF0BC23009ED94E /* AddImageView.swift */; };
+		30EC1ADA2CF0BC23009ED94E /* AllImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAB2CF0BC23009ED94E /* AllImageView.swift */; };
+		30EC1ADB2CF0BC23009ED94E /* ImageProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAC2CF0BC23009ED94E /* ImageProjectView.swift */; };
+		30EC1ADC2CF0BC23009ED94E /* ProjectCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAD2CF0BC23009ED94E /* ProjectCreateView.swift */; };
+		30EC1ADD2CF0BC23009ED94E /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAE2CF0BC23009ED94E /* ProjectsView.swift */; };
+		30EC1ADE2CF0BC23009ED94E /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AAF2CF0BC23009ED94E /* ProjectView.swift */; };
+		30EC1ADF2CF0BC23009ED94E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AB12CF0BC23009ED94E /* SettingsView.swift */; };
+		30EC1AE02CF0BC23009ED94E /* webView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AB22CF0BC23009ED94E /* webView.swift */; };
+		30EC1AE12CF0BC23009ED94E /* WebViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AB32CF0BC23009ED94E /* WebViewPage.swift */; };
+		30EC1AE22CF0BC23009ED94E /* DreamHome_DesignerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EC1AB72CF0BC23009ED94E /* DreamHome_DesignerApp.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		309A3E112CED2779002EA8B5 /* DreamHome Designer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DreamHome Designer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EC1A812CF0BC23009ED94E /* NoteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCellView.swift; sourceTree = "<group>"; };
+		30EC1A822CF0BC23009ED94E /* ProjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellView.swift; sourceTree = "<group>"; };
+		30EC1A842CF0BC23009ED94E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		30EC1A862CF0BC23009ED94E /* PhotoProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProject.swift; sourceTree = "<group>"; };
+		30EC1A872CF0BC23009ED94E /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		30EC1A892CF0BC23009ED94E /* EnumStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumStyle.swift; sourceTree = "<group>"; };
+		30EC1A8A2CF0BC23009ED94E /* EnumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
+		30EC1A8C2CF0BC23009ED94E /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		30EC1A8D2CF0BC23009ED94E /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		30EC1A8E2CF0BC23009ED94E /* infoTableButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoTableButtonView.swift; sourceTree = "<group>"; };
+		30EC1A8F2CF0BC23009ED94E /* InfoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableView.swift; sourceTree = "<group>"; };
+		30EC1A902CF0BC23009ED94E /* MultiLineTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineTF.swift; sourceTree = "<group>"; };
+		30EC1A912CF0BC23009ED94E /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		30EC1A922CF0BC23009ED94E /* PlusButtomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtomView.swift; sourceTree = "<group>"; };
+		30EC1A932CF0BC23009ED94E /* SearchTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextFieldView.swift; sourceTree = "<group>"; };
+		30EC1A942CF0BC23009ED94E /* SettingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButtonView.swift; sourceTree = "<group>"; };
+		30EC1A952CF0BC23009ED94E /* SwitchTypeprojectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTypeprojectView.swift; sourceTree = "<group>"; };
+		30EC1A972CF0BC23009ED94E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30EC1A992CF0BC23009ED94E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30EC1A9A2CF0BC23009ED94E /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		30EC1A9B2CF0BC23009ED94E /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		30EC1A9C2CF0BC23009ED94E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		30EC1A9E2CF0BC23009ED94E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30EC1AA02CF0BC23009ED94E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		30EC1AA22CF0BC23009ED94E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30EC1AA42CF0BC23009ED94E /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		30EC1AA62CF0BC23009ED94E /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		30EC1AA72CF0BC23009ED94E /* PageIntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntroModel.swift; sourceTree = "<group>"; };
+		30EC1AA82CF0BC23009ED94E /* PageIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntroView.swift; sourceTree = "<group>"; };
+		30EC1AAA2CF0BC23009ED94E /* AddImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageView.swift; sourceTree = "<group>"; };
+		30EC1AAB2CF0BC23009ED94E /* AllImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageView.swift; sourceTree = "<group>"; };
+		30EC1AAC2CF0BC23009ED94E /* ImageProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProjectView.swift; sourceTree = "<group>"; };
+		30EC1AAD2CF0BC23009ED94E /* ProjectCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateView.swift; sourceTree = "<group>"; };
+		30EC1AAE2CF0BC23009ED94E /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		30EC1AAF2CF0BC23009ED94E /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		30EC1AB12CF0BC23009ED94E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30EC1AB22CF0BC23009ED94E /* webView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webView.swift; sourceTree = "<group>"; };
+		30EC1AB32CF0BC23009ED94E /* WebViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPage.swift; sourceTree = "<group>"; };
+		30EC1AB62CF0BC23009ED94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30EC1AB72CF0BC23009ED94E /* DreamHome_DesignerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamHome_DesignerApp.swift; sourceTree = "<group>"; };
+		30EC1AB92CF0BC23009ED94E /* DreamHome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreamHome.xcdatamodel; sourceTree = "<group>"; };
+		30EC1AE32CF0BD3A009ED94E /* DreamHome-Designer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DreamHome-Designer-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		309A3E132CED2779002EA8B5 /* DreamHome Designer */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "DreamHome Designer";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		309A3E0E2CED2779002EA8B5 /* Frameworks */ = {
@@ -33,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				309A3E122CED2779002EA8B5 /* Products */,
-				309A3E132CED2779002EA8B5 /* DreamHome Designer */,
+				30EC1AB82CF0BC23009ED94E /* DreamHome Designer */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +121,167 @@
 				309A3E112CED2779002EA8B5 /* DreamHome Designer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		30EC1A832CF0BC23009ED94E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A812CF0BC23009ED94E /* NoteCellView.swift */,
+				30EC1A822CF0BC23009ED94E /* ProjectCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30EC1A882CF0BC23009ED94E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A842CF0BC23009ED94E /* CoreDataManager.swift */,
+				30EC1A852CF0BC23009ED94E /* DreamHome.xcdatamodeld */,
+				30EC1A862CF0BC23009ED94E /* PhotoProject.swift */,
+				30EC1A872CF0BC23009ED94E /* UIImageTransformer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		30EC1A8B2CF0BC23009ED94E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A892CF0BC23009ED94E /* EnumStyle.swift */,
+				30EC1A8A2CF0BC23009ED94E /* EnumType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		30EC1A962CF0BC23009ED94E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A8C2CF0BC23009ED94E /* CustomButtonView.swift */,
+				30EC1A8D2CF0BC23009ED94E /* CustomTabBarView.swift */,
+				30EC1A8E2CF0BC23009ED94E /* infoTableButtonView.swift */,
+				30EC1A8F2CF0BC23009ED94E /* InfoTableView.swift */,
+				30EC1A902CF0BC23009ED94E /* MultiLineTF.swift */,
+				30EC1A912CF0BC23009ED94E /* PhotoPicker.swift */,
+				30EC1A922CF0BC23009ED94E /* PlusButtomView.swift */,
+				30EC1A932CF0BC23009ED94E /* SearchTextFieldView.swift */,
+				30EC1A942CF0BC23009ED94E /* SettingButtonView.swift */,
+				30EC1A952CF0BC23009ED94E /* SwitchTypeprojectView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		30EC1A982CF0BC23009ED94E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A972CF0BC23009ED94E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30EC1A9D2CF0BC23009ED94E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A992CF0BC23009ED94E /* HomeViewModel.swift */,
+				30EC1A9A2CF0BC23009ED94E /* LoadingViewModel.swift */,
+				30EC1A9B2CF0BC23009ED94E /* ProjectViewModel.swift */,
+				30EC1A9C2CF0BC23009ED94E /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30EC1A9F2CF0BC23009ED94E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A9E2CF0BC23009ED94E /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30EC1AA12CF0BC23009ED94E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AA02CF0BC23009ED94E /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		30EC1AA32CF0BC23009ED94E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AA22CF0BC23009ED94E /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30EC1AA52CF0BC23009ED94E /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AA42CF0BC23009ED94E /* AddNoteView.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		30EC1AA92CF0BC23009ED94E /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AA62CF0BC23009ED94E /* IntroView.swift */,
+				30EC1AA72CF0BC23009ED94E /* PageIntroModel.swift */,
+				30EC1AA82CF0BC23009ED94E /* PageIntroView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		30EC1AB02CF0BC23009ED94E /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AAA2CF0BC23009ED94E /* AddImageView.swift */,
+				30EC1AAB2CF0BC23009ED94E /* AllImageView.swift */,
+				30EC1AAC2CF0BC23009ED94E /* ImageProjectView.swift */,
+				30EC1AAD2CF0BC23009ED94E /* ProjectCreateView.swift */,
+				30EC1AAE2CF0BC23009ED94E /* ProjectsView.swift */,
+				30EC1AAF2CF0BC23009ED94E /* ProjectView.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		30EC1AB42CF0BC23009ED94E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AB12CF0BC23009ED94E /* SettingsView.swift */,
+				30EC1AB22CF0BC23009ED94E /* webView.swift */,
+				30EC1AB32CF0BC23009ED94E /* WebViewPage.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		30EC1AB52CF0BC23009ED94E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1A9F2CF0BC23009ED94E /* Home */,
+				30EC1AA12CF0BC23009ED94E /* Loading */,
+				30EC1AA32CF0BC23009ED94E /* Main */,
+				30EC1AA52CF0BC23009ED94E /* Note */,
+				30EC1AA92CF0BC23009ED94E /* OnBoarding */,
+				30EC1AB02CF0BC23009ED94E /* Project */,
+				30EC1AB42CF0BC23009ED94E /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30EC1AB82CF0BC23009ED94E /* DreamHome Designer */ = {
+			isa = PBXGroup;
+			children = (
+				30EC1AE32CF0BD3A009ED94E /* DreamHome-Designer-Info.plist */,
+				30EC1A832CF0BC23009ED94E /* Cells */,
+				30EC1A882CF0BC23009ED94E /* CoreData */,
+				30EC1A8B2CF0BC23009ED94E /* Enums */,
+				30EC1A962CF0BC23009ED94E /* Helpers */,
+				30EC1A982CF0BC23009ED94E /* Preview Content */,
+				30EC1A9D2CF0BC23009ED94E /* ViewModels */,
+				30EC1AB52CF0BC23009ED94E /* Views */,
+				30EC1AB62CF0BC23009ED94E /* Assets.xcassets */,
+				30EC1AB72CF0BC23009ED94E /* DreamHome_DesignerApp.swift */,
+			);
+			path = "DreamHome Designer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +298,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				309A3E132CED2779002EA8B5 /* DreamHome Designer */,
 			);
 			name = "DreamHome Designer";
 			packageProductDependencies = (
@@ -86,6 +322,7 @@
 				};
 			};
 			buildConfigurationList = 309A3E0C2CED2779002EA8B5 /* Build configuration list for PBXProject "DreamHome Designer" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -93,8 +330,6 @@
 				Base,
 			);
 			mainGroup = 309A3E082CED2779002EA8B5;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 309A3E122CED2779002EA8B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -109,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EC1ABA2CF0BC23009ED94E /* Preview Assets.xcassets in Resources */,
+				30EC1ABB2CF0BC23009ED94E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +356,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EC1ABC2CF0BC23009ED94E /* NoteCellView.swift in Sources */,
+				30EC1ABD2CF0BC23009ED94E /* ProjectCellView.swift in Sources */,
+				30EC1ABE2CF0BC23009ED94E /* CoreDataManager.swift in Sources */,
+				30EC1ABF2CF0BC23009ED94E /* DreamHome.xcdatamodeld in Sources */,
+				30EC1AC02CF0BC23009ED94E /* PhotoProject.swift in Sources */,
+				30EC1AC12CF0BC23009ED94E /* UIImageTransformer.swift in Sources */,
+				30EC1AC22CF0BC23009ED94E /* EnumStyle.swift in Sources */,
+				30EC1AC32CF0BC23009ED94E /* EnumType.swift in Sources */,
+				30EC1AC42CF0BC23009ED94E /* CustomButtonView.swift in Sources */,
+				30EC1AC52CF0BC23009ED94E /* CustomTabBarView.swift in Sources */,
+				30EC1AC62CF0BC23009ED94E /* infoTableButtonView.swift in Sources */,
+				30EC1AC72CF0BC23009ED94E /* InfoTableView.swift in Sources */,
+				30EC1AC82CF0BC23009ED94E /* MultiLineTF.swift in Sources */,
+				30EC1AC92CF0BC23009ED94E /* PhotoPicker.swift in Sources */,
+				30EC1ACA2CF0BC23009ED94E /* PlusButtomView.swift in Sources */,
+				30EC1ACB2CF0BC23009ED94E /* SearchTextFieldView.swift in Sources */,
+				30EC1ACC2CF0BC23009ED94E /* SettingButtonView.swift in Sources */,
+				30EC1ACD2CF0BC23009ED94E /* SwitchTypeprojectView.swift in Sources */,
+				30EC1ACE2CF0BC23009ED94E /* HomeViewModel.swift in Sources */,
+				30EC1ACF2CF0BC23009ED94E /* LoadingViewModel.swift in Sources */,
+				30EC1AD02CF0BC23009ED94E /* ProjectViewModel.swift in Sources */,
+				30EC1AD12CF0BC23009ED94E /* SettingsViewModel.swift in Sources */,
+				30EC1AD22CF0BC23009ED94E /* HomeView.swift in Sources */,
+				30EC1AD32CF0BC23009ED94E /* LoadingView.swift in Sources */,
+				30EC1AD42CF0BC23009ED94E /* MainView.swift in Sources */,
+				30EC1AD52CF0BC23009ED94E /* AddNoteView.swift in Sources */,
+				30EC1AD62CF0BC23009ED94E /* IntroView.swift in Sources */,
+				30EC1AD72CF0BC23009ED94E /* PageIntroModel.swift in Sources */,
+				30EC1AD82CF0BC23009ED94E /* PageIntroView.swift in Sources */,
+				30EC1AD92CF0BC23009ED94E /* AddImageView.swift in Sources */,
+				30EC1ADA2CF0BC23009ED94E /* AllImageView.swift in Sources */,
+				30EC1ADB2CF0BC23009ED94E /* ImageProjectView.swift in Sources */,
+				30EC1ADC2CF0BC23009ED94E /* ProjectCreateView.swift in Sources */,
+				30EC1ADD2CF0BC23009ED94E /* ProjectsView.swift in Sources */,
+				30EC1ADE2CF0BC23009ED94E /* ProjectView.swift in Sources */,
+				30EC1ADF2CF0BC23009ED94E /* SettingsView.swift in Sources */,
+				30EC1AE02CF0BC23009ED94E /* webView.swift in Sources */,
+				30EC1AE12CF0BC23009ED94E /* WebViewPage.swift in Sources */,
+				30EC1AE22CF0BC23009ED94E /* DreamHome_DesignerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +530,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DreamHome Designer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DreamHome-Designer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DreamHome Designer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,12 +565,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DreamHome Designer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DreamHome-Designer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DreamHome Designer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +612,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		30EC1A852CF0BC23009ED94E /* DreamHome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				30EC1AB92CF0BC23009ED94E /* DreamHome.xcdatamodel */,
+			);
+			currentVersion = 30EC1AB92CF0BC23009ED94E /* DreamHome.xcdatamodel */;
+			path = DreamHome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 309A3E092CED2779002EA8B5 /* Project object */;
 }

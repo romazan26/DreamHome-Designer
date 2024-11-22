@@ -66,7 +66,12 @@ struct ProjectCreateView: View {
                     
                     //MARK: - Add button
                     Button {
-                        vm.addProject()
+                        if vm.isEditeProjectMode {
+                            vm.editProjectData()
+                        }else{
+                            vm.addProject()
+                        }
+                        
                         dismiss()
                     } label: {
                         Image(systemName: "checkmark.square.fill")

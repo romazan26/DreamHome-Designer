@@ -31,10 +31,12 @@ final class ProjectViewModel: ObservableObject {
     
     @Published var simplePhoto: UIImage = .logo
     
+    @Published var simpleProject: Project?
     @Published var searchText: String = ""
     @Published var simpleNameProject = ""
     @Published var simpleStyle = Style.Other
     @Published var simpleType = TypeProject.Exterior
+    @Published var isEditeProjectMode = false
     
     @Published var isPresentAddNote: Bool = false
     @Published var isPresentImage: Bool = false
@@ -88,6 +90,15 @@ final class ProjectViewModel: ObservableObject {
     }
     
     //MARK: - Edit data
+    func editProjectData(){
+        simpleProject?.name = simpleNameProject
+        simpleProject?.style = simpleStyle.rawValue
+        simpleProject?.type = simpleType.rawValue
+        saveProject()
+        isEditeProjectMode = false
+        clearProjectData()
+    }
+    
     func editNoteData(){
         simpleNote?.title = simpleNoteTitle
         simpleNote?.text = simpleNoteText
@@ -103,6 +114,14 @@ final class ProjectViewModel: ObservableObject {
         simpleNoteTitle = note.title ?? ""
         simpleNote = note
         isEditeNoteMode = true
+    }
+    
+    func feellProjectData(project: Project){
+        simpleProject = project
+        simpleNameProject = project.name ?? ""
+        simpleStyle = Style(rawValue: project.style ?? "") ?? .Other
+        simpleType = TypeProject(rawValue: project.type ?? "") ?? .Exterior
+        isEditeProjectMode = true
     }
     
     //MARK: - Delete data
@@ -233,6 +252,7 @@ final class ProjectViewModel: ObservableObject {
         simpleNameProject = ""
         simpleType = .Exterior
         simpleStyle = .Other
+        simpleProject = nil
     }
     func clearNoteData() {
         simpleNote = nil

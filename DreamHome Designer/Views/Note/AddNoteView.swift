@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddNoteView: View {
     @StateObject var vm: ProjectViewModel
+    @FocusState var isFocused: Bool
     let project: Project
     var body: some View {
         ZStack {
@@ -17,7 +18,9 @@ struct AddNoteView: View {
                 //MARK: - text of note
                 HStack {
                     MultiLineTF(txt: $vm.simpleNoteTitle, placehold: "Note title")
+                        .focused($isFocused)
                     MultiLineTF(txt: $vm.simpleNoteText, placehold: "Materials for the house")
+                        .focused($isFocused)
                 }
                 .frame(maxWidth: .infinity)
                 .frame(height: 192)
@@ -67,6 +70,8 @@ struct AddNoteView: View {
 
                 }
             }
+        }.onTapGesture {
+            isFocused = false
         }
     }
 }

@@ -116,9 +116,11 @@ struct ProjectView: View {
                     }
                     
                     //MARK: - Edit buttom
-                    Button(action: {
-                       /// edit
-                    }) {
+                    NavigationLink {
+                        ProjectCreateView(vm: vm).onAppear {
+                            vm.feellProjectData(project: project)
+                        }
+                    } label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
                             .frame(width: 48, height: 48)
