@@ -21,11 +21,13 @@ struct LoadingView: View {
                 .padding(.top, 350)
         }
         .fullScreenCover(isPresented: $vm.isPresent, content: {
-            if vm.isFirstLaunch ?? true {
-                IntroView()
-            }else{
-                MainView()
-            }
+            if vm.isConnected {
+                WebViewPage(urlString: (URL(string: vm.urlString)!))
+            }else if vm.isFirstLaunch ?? true {
+            IntroView()
+        }else{
+            MainView()
+        }
         })
         .onAppear(perform: {
             vm.starttimer()
